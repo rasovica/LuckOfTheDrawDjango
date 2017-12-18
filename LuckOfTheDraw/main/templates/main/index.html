@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script
+            src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href={% static "main/main.css" %}>
+    <script src="{%  static "main/main.js" %}"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row upper">
+        <div id="add">
+            <button class="button button--secondary">
+                <p class="button__inner">Add a field</p>
+            </button>
+        </div>
+        <div id="toggle_custom">
+            <button class="button button--secondary">
+                <p class="button__inner" id="toggle_btn">Enable custom probability</p>
+            </button>
+        </div>
+        <div id="spin">
+            <button class="button">
+                <p class="button__inner">Spinit!</p>
+            </button>
+        </div>
+    </div>
+    <div class="row lower">
+        <div id="options">
+            <div id="option" class="col-lg-12">
+                <div class="delete" id="delete1" onclick="delete_row(this)">
+                    <div class="button_base deleter">
+                        <div>X</div>
+                    </div>
+                </div>
+                <div class="left" style="display: inline-block;">
+                    <input type="text" id="option1" class="question" name="nme" title="option1" required autocomplete="off">
+                    <label for="option1"><span>What be thy option?</span></label>
+                </div>
+                <div class="right hiddens" id="probHide1" style="display:inline-block">
+                    <input type="text" id="probability1" class="question" title="probability1" required autocomplete="off">
+                    <label for="probability1"><span>Percentlyhood of success?</span></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
